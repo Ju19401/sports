@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_12_105939) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_12_124529) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -38,6 +38,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_12_105939) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.integer "temperature"
+    t.float "wind_force"
+    t.float "wind_direction"
+    t.integer "prob_rain"
+    t.integer "prob_fog"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
