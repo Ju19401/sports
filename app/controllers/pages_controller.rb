@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def home
+  def index
     @sports = Sport.all
   end
 end

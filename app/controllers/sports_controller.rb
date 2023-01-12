@@ -1,9 +1,6 @@
 class SportsController < ApplicationController
-  def new
-    @spot = Spot.new
-  end
-
-  def create
+  def index
+    @sports = Sport.all
   end
 
   def show
