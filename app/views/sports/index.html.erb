@@ -2,6 +2,7 @@
 <% if @sports.present? %>
   <ul>
     <% @sports.each do |sport| %>
+    <%= link_to sport_path(sport) %>
       <ul><%= sport.name %></ul>
       <ul><%= sport.distance %></ul>
       <ul><%= sport.time %></ul>

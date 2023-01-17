@@ -1,10 +1,10 @@
 class SportsController < ApplicationController
   def index
-    @sports = Sport.all
+    @sports = Sport.where(name: ["Trail", "VTT", "Running", "Snowboarding", "Traking"])
   end
 
   def show
-    @sport = Sport.find(params[:id])
+    @sports = Sport.find(params[:id])
   end
 
   private
