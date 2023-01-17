@@ -1,1 +1,12 @@
 <h1>List circuit</h1>
+<% if @sports.present? %>
+  <ul>
+    <% @sports.each do |sport| %>
+      <ul><%= sport.name %></ul>
+      <ul><%= sport.distance %></ul>
+      <ul><%= sport.time %></ul>
+      <ul><%= sport.description %></ul>
+      <ul><%= sport.address %></ul>
+      <ul><%= sport.level %></ul>
+    <% end %>
+    <% end %>
