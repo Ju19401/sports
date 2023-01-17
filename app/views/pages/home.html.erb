@@ -1,35 +1,61 @@
 <h1>Preferences</h1>
 <h2>Choose a sport</h2>
 
-<h3>Running</h3>
-<h3>Trails</h3>
-<h3>Cycling</h3>
-<h3>VTT</h3>
-<h3>Snow Sports</h3>
-<h3>Traking</h3>
-<h3>Hiking</h3>
+<%= form_with url: sports_path, method: "get" do |f|  %>
+<input type="checkbox" id="sport" name="running">
+<label for="running">Running</label>
+<input type="checkbox" id="sports" name="trail">
+<label for="trail">Trail</label>
+<input type="checkbox" id="sports" name="cycling">
+<label for="cycling">Cycling</label>
+<input type="checkbox" id="sports" name="vtt">
+<label for="vtt">VTT</label>
+<input type="checkbox" id="sports" name="snow">
+<label for="snow">Snow Sports</label>
+<input type="checkbox" id="sports" name="traking">
+<label for="traking">Traking</label>
+<input type="checkbox" id="sports" name="hiking">
+<label for="hikinh">Hiking</label>
+<% end %>
 
 <h2>Choose a level</h2>
-<h3>Novice</h3>
-<h3>Intermediate</h3>
-<h3>Expert</h3>
+<%= form_with url: sports_path, method: "get" do |f|  %>
+<input type="checkbox" id="level" name="novice">
+<label for="novice">Novice</label>
+<input type="checkbox" id="level" name="intermediate">
+<label for="intermediate">Intermediate</label>
+<input type="checkbox" id="level" name="expert">
+<label for="expert">Expert</label>
+<% end %>
 
 <h2>Choose a frequence (at best)</h2>
 
-<h3>Once a week</h3>
-<h3>Twice a week</h3>
-<h3>Three times a week</h3>
+<%= form_with url: sports_path, method: "get" do |f|  %>
+<input type="checkbox" id="frequence" name="once">
+<label for="once">Once a week</label>
+<input type="checkbox" id="frequence" name="twice">
+<label for="twice">Twice a week</label>
+<input type="checkbox" id="frequence" name="three">
+<label for="three">Three time a week</label>
+<% end  %>
 
 
 <h1>Nutrition preferences</h1>
+<%= form_with url: sports_path, method: "get" do |f|  %>
+<input type="checkbox" id="nutrition" name="vegetarian">
+<label for="vegetarian">Vegetarian</label>
+<input type="checkbox" id="nutrition" name="vegan">
+<label for="vegan">Vegan</label>
+<input type="checkbox" id="nutrition" name="gluten">
+<label for="gluten">Gluten Free</label>
+<input type="checkbox" id="nutrition" name="lactose">
+<label for="lactose">Lactose Free</label>
+<input type="checkbox" id="nutrition" name="fat">
+<label for="fat">Low Fat</label>
+<input type="checkbox" id="nutrition" name="sugar">
+<label for="sugar">Low Sugar</label>
+<input type="checkbox" id="nutrition" name="nothing">
+<label for="nothing">Nothing to report</label>
+<% end  %>
 
-<h3>Vegetarian</h3>
-<h3>Vegan</h3>
-<h3>Gluten free</h3>
-<h3>Low carb</h3>
-<h3>Low fat</h3>
-<h3>Low sugar</h3>
-<h3>Lactose Free</h3>
-<h3>Nothing to report</h3>
-
-<h2>Lets see what's going on (btn)</h2>
+<%= link_to "Next step", sports_path(@sports)%>

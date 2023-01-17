@@ -7,3 +7,48 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
+sports1 = Sport.create!(
+  name: "Trail",
+  distance: 10,
+  time: 60,
+  description: "Easy trail in a forest"
+  address: "Grenoble"
+  level: "Novice"
+)
+
+sports2 = Sport.create!(
+  name: "VTT",
+  distance: 25,
+  time: 120,
+  description: "Easy Vtt circuit"
+  address: "Lans-en-Vercors"
+  level: "Novice"
+)
+
+
+sports3 = Sport.create!(
+  name: "Running",
+  distance: 10,
+  time: 45,
+  description: "City run to discover the city"
+  address: "Lyon"
+  level: "Novice"
+)
+
+sports1 = Sport.create!(
+  name: "Snowboarding",
+  distance: 10,
+  time: 100,
+  description: "Discover a snowboard circuit with some forest part"
+  address: "Tignes"
+  level: "Intermediate"
+)
+
+sports1 = Sport.create!(
+  name: "Traking",
+  distance: 100,
+  time: 200,
+  description: "Traiking in the Alpes, you will discover the Mont Blanc"
+  address: "Chamonix"
+  level: "Expert"
+)
