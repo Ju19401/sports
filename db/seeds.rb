@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
+20.times do
 sports1 = Sport.create!(
   name: "Trail",
   distance: 10,
@@ -30,7 +30,7 @@ sports3 = Sport.create!(
   name: "Running",
   distance: 10,
   time: 45,
-  description: "City run to discover the city",
+  description: "Run to discover the city",
   address: "Lyon",
   level: "Novice",
 )
@@ -52,3 +52,4 @@ sports5 = Sport.create!(
   address: "Chamonix",
   level: "Expert",
 )
+end

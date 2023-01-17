@@ -2,12 +2,15 @@
 <% if @sports.present? %>
   <ul>
     <% @sports.each do |sport| %>
-    <%= link_to sport_path(sport) %>
-      <ul><%= sport.name %></ul>
-      <ul><%= sport.distance %></ul>
-      <ul><%= sport.time %></ul>
-      <ul><%= sport.description %></ul>
-      <ul><%= sport.address %></ul>
-      <ul><%= sport.level %></ul>
+    <%= link_to sport_path(sport) do %>
+    <li>
+      <p><%= sport.name %></p>
+      <p><%= sport.distance %></p>
+      <p><%= sport.time %></p>
+      <p><%= sport.description %></p>
+      <p><%= sport.address %></p>
+      <p><%= sport.level %></p>
+     </li>
     <% end %>
     <% end %>
+ <% end %>
