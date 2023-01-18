@@ -1,4 +1,5 @@
 class SportsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @sports = Sport.where(name: ["Trail", "VTT", "Running", "Snowboarding", "Traking"])
   end

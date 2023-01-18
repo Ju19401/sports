@@ -1,5 +1,3 @@
 class PagesController < ApplicationController
-  def index
-    @sports = Sport.all
-  end
+  before_action :authenticate_user!
 end
